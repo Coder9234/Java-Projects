@@ -1,0 +1,34 @@
+import java.util.*;
+    public static void path(){
+        ArryaList<String>dir[] = new dir<>();
+        String temp = "";
+        for (int i = 1; i < path.length; i++){
+            char ch = path.charAt(i);
+            if (ch != '/'){
+                temp += ch;
+            }
+            else{
+                if (!temp.equals("")){
+                    dir.add(temp);
+                }
+                temp = "";
+            }
+        }
+        Stack<String>s = new Stack<>();
+        for (int i = 0; i < dir.size(); i++){
+            temp = dir.get(i);
+            if (temp.equals(".")){
+                continue;
+            }
+            if (temp.equals("..") && !s.isEmpty()){
+                s.pop();
+            }
+            else{
+                s.push(temp);
+            }
+        }
+        return "";
+    }
+public static void main(String args[]){
+
+}
